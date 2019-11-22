@@ -1,0 +1,31 @@
+1. Nilai akurasi dengan proses normalisasi, lemmatisasi, dan penghilangan stopwords:
+   - Training accuracy : 0.985722
+   - Testing accuracy : 0.94012
+   
+   Nilai akurasi tanpa proses normalisasi dengan classifier Linear Regression:
+   - Training accuracy : 0.985722
+   - Testing accuracy : 0.934132
+   
+   Nilai akurasi tanpa proses lemmatisasi dengan classifier Linear Regression:
+   - Training accuracy : 0.984664
+   - Testing accuracy : 0.946108
+   
+   Nilai akurasi tanpa proses menghilangkan stopwords dengan classifier Linear Regression:
+   - Training accuracy : 0.972501
+   - Testing accuracy : 0.931138
+   
+   Berdasarkan eksperimen ini, nilai akurasi terkecil ada pada klasifikasi tanpa proses menghilangkan stopwords dengan classifier Linear Regression.
+   
+   
+2. Nilai akurasi dengan nilai max_features lebih besar dari 300 (max_features=600):
+   - Training accuracy : 0.991539
+   - Testing accuracy : 0.967066
+   
+   Nilai akurasi dengan nilai max_features lebih kecil dari 300 (max_features=200):
+   - Training accuracy : 0.969857
+   - Testing accuracy : 0.919162
+   
+   Berdasarkan eksperimen ini, dapat dilihat bahwa semakin kecil nilai max_features maka semakin kecil nilai akurasi.
+   
+   
+3. Jika ingin menggunakan teks bahasa Indonesia, bagian yang perlu dilakukan penyesuaian adalah text cleaning dan preparation. Pada teks bahasa Indonesia, tidak perlu proses menghapus "'s" seperti pada teks berbahasa Inggris. Kemudian, pada teks berbahasa Indonesia dapat dilakukan proses lematisasi menggunakan WordNet Bahasa Indonesia atau stemming menggunakan Sastrawi. Selain itu, proses menghapus stopwords pada teks berbahasa Indonesia tidak dapat menggunakan nltk stopwords seperti teks berbahasa Inggris. Pada teks berbahasa Indonesia, proses menghapus stopwords dapat menggunakan StopWordRemoverFactory().
